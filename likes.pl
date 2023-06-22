@@ -20,10 +20,13 @@
 ?- likes(sam,curry).
 */
 
+
+%% Sam likes food that is indian AND mild
 likes(sam,Food) :-
     indian(Food),
     mild(Food).
 
+%% Sam also likes chinese and italian food.
 likes(sam,Food) :-
     chinese(Food).
 
@@ -32,10 +35,12 @@ likes(sam,Food) :-
 
 likes(sam,chips).
 
+%% Tammy only likes spicy Indian food
 likes(tammy,Food) :-
     indian(Food),
     spicy(Food).
 
+%% FACTS
 indian(curry).
 indian(dahl).
 indian(tandoori).
